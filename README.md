@@ -9,11 +9,13 @@
 ## MoneyBaller
 ## Project Description
 ```
-A fantasy style game where players draft a baseball team of past and present players, with the goal being to build the strongest possible team based off of the WAR stat.
+A fantasy style game where players draft a baseball team of past and present players,
+ with the goal being to build the strongest possible team based off of the WAR stat.
 ```
 ## User Story
 ```
-As a baseball fan, I want to test my knowledge by building the best possible team, and compare my score with others
+As a baseball fan, I want to test my knowledge by building the best possible team,
+ and compare my score with others
 ```
 ## APIs to be used
 ```
