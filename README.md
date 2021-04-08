@@ -2,9 +2,9 @@
 # WireFrame
 
 ![Draft](./Imgs/DraftImg.png)
-![Draft](./Imgs/GameImg.png)
-![Draft](./Imgs/ProfileImg.png)
-![Draft](./Imgs/SignInImg.png)
+![Game](./Imgs/GameImg.png)
+![Profile](./Imgs/ProfileImg.png)
+![Sign-In](./Imgs/SignInImg.png)
 
 ## MoneyBaller
 ## Project Description
