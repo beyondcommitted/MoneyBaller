@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS moneyBaller_db;
+CREATE DATABASE moneyBaller_db;
