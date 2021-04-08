@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoneyBaller</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <header class="header">
+        <h1>
+          <a class="moneyBaller" href="/">MoneyBaller</a>
+        </h1>
+        <nav class="navBar">
+          <!-- Conditionally render login or logout links -->
+           {{#if logged_in}} 
+          <a class="TeamPages" href="/TeamPages">TeamPages</a> |
+          <a class="logout" id="logout">logout</a>
+          {{else}} 
+          <!-- <a class="login" href="/login">login</a> -->
+           {{/if}} 
+        </nav>
+      </header>
+      <div class="detailsCont">
+        <div class="MyTeamsCont">
+          <h2>Managers Name:{{ name }}</h2>
+          <label for="Teams">Choose a Team:</label>
+          <select name="Team 1" id="input-Team_Name">
+            <option value="Null">None</option>
+            <option value="Team 1">Team 1</option>
+          </select>
+          <a href="/draft" class="DraftBtn">Draft A New Team</a>
+          <a href="/Play" class="PlayBtn">Play Ball</a>
+        </div>
+        <div class="DisplayMyTeam">
+          <h3>Positions:</h3>
+          <div>
+            <span class="selectedPitcher">{{Team-View}}</span>
+          </div>
+        </div>
+      </div>
+      <main>
+        <!-- Render the sub layout -->
+         {{{ body }}} 
+      </main>
+      <footer></footer>
+    </div>
+
+    <!-- Render script for logged in users only -->
+ {{#if logged_in}}=
+    <!-- <script src="/js/logout.js"></script> -->
+  {{/if}} 
+  </body>
+</html>
