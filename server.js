@@ -4,8 +4,13 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./Controllers');
 const helpers = require('./utils/helpers');
+
+
+const sequelize = require('./Config/connection');
+
 const { Team } = require('./models');
 const sequelize = require('./config/connection');
+
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -50,7 +55,6 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
