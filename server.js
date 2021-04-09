@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const routes = require('./Controllers');
 const helpers = require('./utils/helpers');
 const { Team } = require('./models');
+const Manager = require('./models/Manager');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -28,11 +29,11 @@ const sess = {
 app.use(session(sess));
 
 
-app.get("/login", function (req, res){
+app.get("/", function (req, res){
   res.render("login");
 });
 app.get("/teampage", function (req, res){
-  res.render("teampage", {players: Team});
+  res.render("teampage", { Manager });
 });
 
 
