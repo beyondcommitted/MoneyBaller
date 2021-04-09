@@ -4,8 +4,8 @@ const managerLoginHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const managerLogin = document.querySelector("#manager-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+  const managerLogin = document.querySelector("#managerName").value.trim();
+  const password = document.querySelector("#managerPassword").value.trim();
 
   if (managerLogin && password) {
     // Send a POST request to the API endpoint
@@ -27,9 +27,9 @@ const managerLoginHandler = async (event) => {
     event.preventDefault();
     console.log("hello")
     const createManager = document
-      .querySelector("#manager-signup")
+      .querySelector("#newmanagerNameInput")
       .value.trim();
-    const password = document.querySelector("#password-signup").value.trim();
+    const password = document.querySelector("#newPasswordInput").value.trim();
 
     if (createManager && password) {
       const response = await fetch("/api/managers", {
@@ -50,11 +50,11 @@ const managerLoginHandler = async (event) => {
 
 
 document
-  .querySelector(".loginManager")
+  .querySelector("#signInBtn")
   .addEventListener("click", managerLoginHandler);
 
 document
-  .querySelector("#newManager")
+  .querySelector("#newManagerBtn")
   .addEventListener("click", createManagerHandler);
 
 
