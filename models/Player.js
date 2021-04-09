@@ -34,6 +34,6 @@ class Player extends Model {}
      }),
     
 
-  module.exports = player;
+  module.exports = Player;
 
   connection.sync();

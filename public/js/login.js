@@ -1,5 +1,3 @@
-console.log("hello world!");
-
 const managerLoginHandler = async (event) => {
   event.preventDefault();
 
@@ -9,7 +7,7 @@ const managerLoginHandler = async (event) => {
 
   if (managerLogin && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch("/api/managers/", {
+    const response = await fetch("/api/managers/login", {
       method: "POST",
       body: JSON.stringify({ name: managerLogin, password }),
       headers: { "Content-Type": "application/json" },
@@ -17,37 +15,35 @@ const managerLoginHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace("/draft");
+      document.location.replace("/teampage");
     } else {
       alert(response.statusText);
     }
   }
 };
-  const createManagerHandler = async (event) => {
-    event.preventDefault();
-    console.log("hello")
-    const createManager = document
-      .querySelector("#newmanagerNameInput")
-      .value.trim();
-    const password = document.querySelector("#newPasswordInput").value.trim();
+const createManagerHandler = async (event) => {
+  event.preventDefault();
+  console.log("hello");
+  const createManager = document
+    .querySelector("#newManagerNameInput")
+    .value.trim();
+  const password = document.querySelector("#newPasswordInput").value.trim();
 
-    if (createManager && password) {
-      const response = await fetch("/api/managers", {
-        method: "POST",
-        body: JSON.stringify({ name: createManager, password }),
-        headers: { "Content-Type": "application/json" },
-      });
+  if (createManager && password) {
+    const response = await fetch("/api/managers", {
+      method: "POST",
+      body: JSON.stringify({ name: createManager, password }),
+      headers: { "Content-Type": "application/json" },
+    });
 
-      if (response.ok) {
-        document.location.replace("/draft");
-      } else {
-        alert(response.statusText);
-      }
+    if (response.ok) {
+      document.location.replace("/teampage");
+    } else {
+      alert(response.statusText);
     }
-    console.log(createManager)
-  
+  }
+  console.log(createManager);
 };
-
 
 document
   .querySelector("#signInBtn")
@@ -56,5 +52,3 @@ document
 document
   .querySelector("#newManagerBtn")
   .addEventListener("click", createManagerHandler);
-
-

@@ -1,9 +1,8 @@
 
 const Manager = require('./Manager')
+// const Player = require('./Player');
 
 module.exports = { Manager }
 
-const Team = require('./createdTeam');
 
-module.exports = { Team };
 
