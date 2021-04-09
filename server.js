@@ -5,7 +5,12 @@ const exphbs = require('express-handlebars');
 const routes = require('./Controllers');
 const helpers = require('./utils/helpers');
 
+
 const sequelize = require('./Config/connection');
+
+const { Team } = require('./models');
+const sequelize = require('./config/connection');
+
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -23,9 +28,26 @@ const sess = {
     db: sequelize
   })
 };
+//routes
 
 app.use(session(sess));
+app.get("/login", function (req, res){
+  res.render("login");
+});
+app.get("/teampage", function (req, res){
+  res.render("teampage", {players: Team});
+});
 
+
+app.get("/newTeam", function (req, res){
+  res.render("newTeam");
+});
+app.get("/draft", function (req, res){
+  res.render("draft");
+});
+app.get("/play", function (req, res){
+  res.render("play", {players: Team});
+});
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

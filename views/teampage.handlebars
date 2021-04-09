@@ -1,0 +1,41 @@
+<div class="all">
+
+    <div class="teamSelectorCont">
+<div class="SelectedTeam">
+        <label for="Teams">Selected Team:</label>
+        <select name="Team 1" id="input-Team_Name">
+            <option value="Null">None</option>
+            <option value="Team 1">Team 1</option>
+        </select>
+        <h3>Manager Name:</h3>
+          
+        </div>
+        <div class="actionBtnsCont">
+            <button id="draftBtn">Draft A New Team</button>
+            <button id="playBtn">Play Ball</button>
+        </div>
+    </div>
+
+    <div class="selectedTeamCont">
+        <div class="table">
+            <h4>Positions </h4>
+            <h4>First Name </h4>
+            <h4>Last Name </h4>
+            <h4>War </h4>
+        </div>
+
+        <div class="playerCont">
+            {{#each players}}
+            <h4 class="player">
+                {{position}}
+                {{firstName}}
+                {{lastName}}
+                {{war}}
+                {{/each}}
+            </h4>
+
+        </div>
+
+    </div>
+</div>
+</div>

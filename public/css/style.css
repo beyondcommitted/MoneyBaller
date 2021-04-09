@@ -1,0 +1,194 @@
+.all {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 45px;
+}
+body {
+  margin-top: 0px;
+  margin: 0px;
+}
+.header {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(168, 63, 57);
+  color: white;
+}
+.MoneyBaller {
+  margin-top: 5px;
+  padding: 20px;
+}
+#input-Team_Name {
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.actionBtnsCont {
+  display: flex;
+  margin-left: 70px;
+  flex-direction: column;
+  margin-top: 150px;
+  width: 300px;
+  justify-content: space-around;
+}
+#draftBtn {
+  border-radius: 100px;
+  border-color: rgb(174, 90, 81);
+  padding: 20px;
+  height: 75px;
+  background-color: white;
+  color: rgb(174, 90, 81);
+}
+#playBtn {
+  border-radius: 100px;
+  border-color: transparent;
+  padding: 20px;
+  height: 75px;
+  margin-top: 20px;
+  background-color: rgb(174, 90, 81);
+  color: white;
+}
+.table {
+  background-color: rgb(174, 90, 81);
+  width: 420px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+}
+.player {
+  background-color: white;
+  font-size: 18px;
+  margin-top: 0px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  word-spacing: 85px;
+  margin-left: 0px;
+}
+.container {
+  margin-left: 75px;
+  margin-top:140px;
+  width: 1200px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.signUpCont {
+    border-radius: 75px;
+  text-align: center;
+  padding: 25px;
+  width: 500px;
+  height: 300px;
+  background-color: rgb(168, 63, 57);
+  color: white;
+}
+.loginCont {
+    border-radius: 75px;
+  text-align: center;
+  color: white;
+  padding: 25px;
+  width: 500px;
+  height: 300px;
+  background-color: rgb(168, 63, 57);
+}
+.signUpCont input {
+  text-align: center;
+  width: 200px;
+  height: 40px;
+}
+.loginCont input {
+  text-align: center;
+  width: 200px;
+  height: 40px;
+}
+.signUpCont button {
+  border-radius: 100px;
+  border-color: transparent;
+  margin-top: 45px;
+  width: 200px;
+  height: 40px;
+}
+.loginCont button {
+  border-radius: 100px;
+  border-color: transparent;
+  margin-top: 45px;
+  width: 200px;
+  height: 40px;
+}
+.selectedTeamCont {
+    
+  background-color: rgb(168, 63, 57);
+  margin-right: 100px;
+}
+.teamSelectorCont {
+  padding: 45px;
+}
+.SelectedTeam {
+  padding: 15px;
+  width: 400px;
+  height: 150px;
+  background-color: rgb(168, 63, 57);
+}
+.threshholdsCont{
+    padding: 15px;
+    width: 400px;
+    height: 500px;
+    background-color: rgb(174, 90, 81);
+    color: white;
+}
+.teamSelectedCont{
+    padding: 15px;
+    width: 400px;
+    height: 150px;
+    background-color: rgb(168, 63, 57);
+    color:white;
+}
+.SelectionCont{
+border-radius: 75px;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    width:400px;
+    height: 400px;
+    background-color: rgb(168, 63, 57);
+    
+}
+.SelectionCont select{
+    height: 40px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    
+}
+.finishBtn{
+    margin-top: 50px;
+    height: 40px;
+    width: 300px;
+}
+.cont{
+   padding: 75px;
+    display: flex;
+    justify-content: center;
+}
+.SelectionCont h4 {
+    margin-bottom: 0px;
+    color: white;
+background-color: rgb(139, 56, 56);
+font-size: 20px;
+font-weight: bold;
+}
+.newTeamDetailsCont{
+   margin-right: 45px;
+    background-color: rgb(168, 63, 57);
+    color: white;
+    width:450px;
+    height: 200px;
+    text-align: center;
+    
+   
+}
+.newTeamDetailsCont input{
+    height: 40px;
+    width: 300px;
+}
