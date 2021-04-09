@@ -27,7 +27,7 @@ const managerLoginHandler = async (event) => {
     event.preventDefault();
     console.log("hello")
     const createManager = document
-      .querySelector("#newmanagerNameInput")
+      .querySelector("#newManagerNameInput")
       .value.trim();
     const password = document.querySelector("#newPasswordInput").value.trim();
 
