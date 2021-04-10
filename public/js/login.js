@@ -28,6 +28,7 @@ const createManagerHandler = async (event) => {
     .querySelector("#newManagerNameInput")
     .value.trim();
   const password = document.querySelector("#newPasswordInput").value.trim();
+  console.log(password);
 
   if (createManager && password) {
     const response = await fetch("/api/managers", {
