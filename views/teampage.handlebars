@@ -1,18 +1,20 @@
 <div class="all">
 
     <div class="teamSelectorCont">
-<div class="SelectedTeam">
-        <label for="Teams">Selected Team:</label>
-        <select name="Team 1" id="input-Team_Name">
-            <option value="Null">None</option>
-            <option value="Team 1">Team 1</option>
-        </select>
-        <h3>Manager Name: {{name:}}</h3>
-          
+        <div class="SelectedTeam">
+            <label for="Teams">Selected Team:</label>
+            <select name="Team 1" id="input-Team_Name">
+                <option value="Null">None</option>
+                <option value="Team 1">Team 1</option>
+            </select>
+            <h3>Manager Name: {{name:}}</h3>
+
         </div>
-        <div class="actionBtnsCont">
-            <button id="draftBtn">Draft A New Team</button>
-            <button id="playBtn">Play Ball</button>
+        <div class="actionBtnsCont"> 
+            <a href="/draft">
+                <button id="draftBtn">Draft A New Team</button></a>
+                <a href="/play">
+            <button id="playBtn">Play Ball</button></a>
         </div>
     </div>
 
