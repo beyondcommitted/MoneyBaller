@@ -1,15 +1,24 @@
+
+ const teamName = document.querySelector("#newTeamName").value.trim();
+    const fielder = document.querySelector("#playerSelectF");
+    const pitcher = document.querySelector("#playerSelectP");
+    const hitter = document.querySelector("#playerSelectH");
+  const fielderChoice = fielder.options[fielder.selectedIndex].text;
+  const pitcherChoice = pitcher.options[pitcher.selectedIndex].text;
+  const hitterChoice = hitter.options[hitter.selectedIndex].text;
+
+console.log(fielderChoice);
+console.log(pitcherChoice);
+console.log(hitterChoice);
 const createTeamHandler = async (event) => {
     event.preventDefault();
     console.log("hello");
-    const teamName = document.querySelector("newTeamName").value.trim();
-    const fielder = document.querySelector("playerSelectF").value.trim();
-    const pitcher = document.querySelector("playerSelectP").value.trim();
-    const hitter = document.querySelector("playerSelectH").value.trim();
+   
 
-    if ( teamName && fielder && pitcher && hitter) {
+    if ( teamName &&  fielderChoice && pitcherChoice && hitterChoice) {
       const response = await fetch("/api/team", {
         method: "POST",
-        body: JSON.stringify({ createTeam: teamName, fielder, pitcher, hitter}),
+        body: JSON.stringify({ teamData: teamName, fielder, pitcher, hitter}),
         headers: { "Content-Type": "application/json" },
       });
   
@@ -19,10 +28,12 @@ const createTeamHandler = async (event) => {
         alert(response.statusText);
       }
     }
-    console.log(createTeam);
+   
   };
   document
   .querySelector("#finishBtnId")
   .addEventListener("click", createTeamHandler);
 
-  
+
+
+ 
