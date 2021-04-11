@@ -1,5 +1,5 @@
 {
-  "name": "MoneyBaller",
+  "name": "moneyballer",
   "version": "1.0.0",
   "description": "![Draft](./Imgs/DraftImg.png)\r ![Game](./Imgs/GameImg.png)\r ![Profile](./Imgs/ProfileImg.png)\r ![Sign-In](./Imgs/SignInImg.png)",
   "main": "index.js",

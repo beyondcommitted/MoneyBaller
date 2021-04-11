@@ -7,7 +7,7 @@ const managerLoginHandler = async (event) => {
 
   if (managerLogin && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch("/api/managers/login", {
+    const response = await fetch("/api/managers/", {
       method: "POST",
       body: JSON.stringify({ name: managerLogin, password }),
       headers: { "Content-Type": "application/json" },
@@ -28,6 +28,7 @@ const createManagerHandler = async (event) => {
     .querySelector("#newManagerNameInput")
     .value.trim();
   const password = document.querySelector("#newPasswordInput").value.trim();
+  console.log(password);
 
   if (createManager && password) {
     const response = await fetch("/api/managers", {
