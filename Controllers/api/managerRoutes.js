@@ -15,7 +15,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.post("/login", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const managerData = await Manager.findOne({
       where: { name: req.body.name },
