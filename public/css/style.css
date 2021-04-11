@@ -15,8 +15,11 @@ body {
   color: white;
 }
 .MoneyBaller {
-  margin-top: 5px;
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
   padding: 20px;
+  margin-top: 0px;
 }
 #input-Team_Name {
   width: 300px;
