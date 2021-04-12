@@ -13,23 +13,49 @@
     
     <div class="selectedTeamCont">
         <div class="table">
-            <h4>Positions </h4>
-            <h4>First Name </h4>
-            <h4>Last Name </h4>
-            <h4>War </h4>
+            <h3>Player</h3>
+          
+            <h3>War </h3>
         </div>
 
         <div class="playerCont">
-            {{#each players}}
-            <h4 class="player">
-                {{position}}
-                {{firstName}}
-                {{lastName}}
-                {{war}}
-                {{/each}}
-            </h4>
+        
+   <div class="PlayerTable"> 
+ <div class="SelectionCont"> 
 
-        </div>
+    <div class="selectedSS">
+        <h4> Fielder</h4>
+        <select id="fielder" name="player">
+            <option value="6.7">Alex Rodriguez</option>
+            <option value="4.4">Pee Wee Reese</option>
+            <option value="4">Derek Jeter</option>
+            <option value="4.7">Craig Biggio</option>
+            <option value="6.7">Jackie Robinson</option>
+        </select>
+            <div class="selectedP">
+       <h4>Pitcher</h4>
+        <select id="pitcher" name="player">
+            <option value="7.8">Cy Young</option>
+            <option value="8.5">Walter Johnson </option>
+            <option value="5.5">Clayton Kershaw</option>
+            <option value="5.5">Zack Greinke</option>
+            <option value="3.8">Lance Lynn</option>
+        </select>
+    </div>
+        <div class="selectedH">
+       <h4>Hitter</h4>
+        <select id="hitter" name="player">
+            <option value="5.9">Frank Thomas</option>
+            <option value="7.6">Barry Bonds</option>
+            <option value="5.6">Roberto Clemente</option>
+            <option value="7.3">Ted Williams</option>
+            <option value="5.6">Ken Griffey Jr.</option>
+        </select>
+  <h1>War Score</h1>
+<h1 id="warscore"></h1>
+   
+<div >
 
+</div>
     </div>
     <script src="/js/play.js"></script>

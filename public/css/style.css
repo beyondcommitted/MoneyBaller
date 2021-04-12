@@ -207,3 +207,10 @@ font-weight: bold;
   background-color: white;
     color:rgb(168, 63, 57);
 }
+.PlayerTable{
+  background-color: white;
+  color:rgb(168, 63, 57);
+}
+#warscore{
+  color: white;
+}
