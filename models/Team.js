@@ -19,6 +19,11 @@ class Team extends Model {}
       type: DataTypes.STRING,
       allowNull: false,
     },
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'team',
     // value: {
     //   type: DataTypes.INTEGER,
     //   allowNull: false,
@@ -28,4 +33,4 @@ class Team extends Model {}
 
   module.exports = Team;
 
-  connection.sync();
+ 
