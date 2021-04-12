@@ -30,6 +30,7 @@ Manager.init(
       },
     },
   },
+  
   {
     hooks: {
       beforeCreate: async (newUserData) => {
