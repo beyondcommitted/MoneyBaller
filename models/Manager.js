@@ -19,6 +19,7 @@ Manager.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     
     password: {
@@ -29,6 +30,7 @@ Manager.init(
       },
     },
   },
+  
   {
     hooks: {
       beforeCreate: async (newUserData) => {
