@@ -1,44 +1,61 @@
-<div class="cont">
-<div class="newTeamDetailsCont">
-    <h3>Manager Name:</h3>
-    <h3>Create a new Team:</h3>
-    <input id="newTeamName" type="text" placeholder="New Team Name">
+<div class="document">
+<div class="createTeam">
 
-</div>
+</div><div class="cont">
+    <div class="newTeamDetailsCont">
+        <h3>Manager Name:</h3>
+        <h3>Create a new Team:</h3>
+        <input id="newTeamName" type="text" placeholder="New Team Name">
+
+    </div>
 
 
-<div class="SelectionCont"> 
-    <div class="selectedSS">
-        <h4>Choose a Fielder</h4>
-        <select id="playerSelectF" name="player">
-            <option value="1"> Alex Rodriguez</option>
-            <option value="2"> Pee Wee Reese</option>
-            <option value="3">Derek Jeter</option>
-        </select>
+    <div class="SelectionCont">
+        <div class="selectedSS">
+            <h4>Choose a Fielder</h4>
+            <select id="playerSelectF" name="player">
+                <option value="Null">-- Select --</option>
+                <option value="1"> Alex Rodriguez</option>
+                <option value="2"> Pee Wee Reese</option>
+                <option value="3">Derek Jeter</option>
+            </select>
             <div class="selectedP">
-       <h4>Choose a Pitcher</h4>
-        <select id="playerSelectP" name="player">
-            <option value=""> Cy Young</option>
-            <option value="">Walter Johnson </option>
-            <option value="">Derek Jeter</option>
-        </select>
+                <h4>Choose a Pitcher</h4>
+                <select id="playerSelectP" name="player">
+                    <option value="Null">-- Select --</option>
+                    <option value="1"> Cy Young</option>
+                    <option value="2">Walter Johnson </option>
+                    <option value="3">Derek Jeter</option>
+                </select>
+            </div>
+            <div id="selectedH">
+                <h4>Choose a Hitter</h4>
+                <select id="playerSelectH" name="player">
+                    <option value="Null">-- Select --</option>
+                    <option value="1">Frank Thomas </option>
+                    <option value="2"> Jose Abreu</option>
+                    <option value="3"> Roberto Clemente </option>
+                </select>
+                <div class="finishDraftCont">
+                    {{!-- <a href="/teampage"> --}}
+                        <button id="finishBtnId" class="finishBtn">Finish Draft</button>
+                        {{!-- </a> --}}
+                    <a href="/teampage">
+                        <button class="finishBtn">Exit</button></a>
+                </div>
+            </div> </div>
+            </div>
+            <div class="teamview">
+            <h2>Team Name: </h2>
+            <h2 id="teamName"></h2>
+            <h2 class="flexbox">Display Team </h2>
+            <h3 id="teamDisplay" class="players"></h3>
+            <div class="players">
+                <h3 id="Feilder"></h3>
+                <h3 id="Pitcher"></h3>
+                <h3 id="Hitter"></h3>
+            </div></div>
+        
     </div>
-        <div class="selectedH">
-       <h4>Choose a Hitter</h4>
-        <select id="playerSelectH" name="player">
-            <option value="1">Frank Thomas </option>
-            <option value="2"> Jose Abreu</option>
-            <option value="3"> Roberto Clemente </option>
-        </select>
-     <div class="finishDraftCont">
-         {{!-- <a href="/teampage"> --}}
-    <button id="finishBtnId" class="finishBtn">Finish Draft</button>
-    {{!-- </a> --}}
-    <a href="/teampage">
-    <button class="finishBtn">Exit</button></a>
-    </div>
-    </div>
-   
-</div>
 </div></div>
 <script src="/js/team.js"></script>
