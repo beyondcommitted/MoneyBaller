@@ -11,7 +11,8 @@
 
 
 
-<div class="SelectionCont"> 
+   <div class="SelectionCont"> 
+
     <div class="selectedSS">
         <h4>Choose a Fielder</h4>
         <select id="playerSelectF" name="player">
@@ -40,13 +41,27 @@
             <option value="7.3">Ted Williams</option>
             <option value="5.6">Ken Griffey Jr.</option>
         </select>
-     <div class="finishDraftCont">
-         {{!-- <a href="/teampage"> --}}
-    <button id="finishBtnId" class="finishBtn">Finish Draft</button>
-    {{!-- </a> --}}
-    <a href="/teampage">
-    <button class="finishBtn">Exit</button></a>
-    </div>
+
+                <div class="finishDraftCont">
+                    {{!-- <a href="/teampage"> --}}
+                        <button id="finishBtnId" class="finishBtn">Finish Draft</button>
+                        {{!-- </a> --}}
+                    <a href="/teampage">
+                        <button class="finishBtn">Exit</button></a>
+                </div>
+            </div> </div>
+            </div>
+            <div class="teamview">
+            <h2>Team Name: </h2>
+            <h2 id="teamName"></h2>
+            <h2 class="flexbox">Display Team </h2>
+            <h3 id="teamDisplay" class="players"></h3>
+            <div class="players">
+                <h3 id="Feilder"></h3>
+                <h3 id="Pitcher"></h3>
+                <h3 id="Hitter"></h3>
+            </div></div>
+        
 
     </div>
 </div></div>
