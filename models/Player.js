@@ -1,3 +1,7 @@
+const sequelize = new Sequelize('bb_db', 'root', '', {
+  host: 'localhost',
+  dialect: 'mysql'
+});
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
