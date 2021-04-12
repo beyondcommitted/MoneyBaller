@@ -170,6 +170,7 @@ border-radius: 75px;
     width: 300px;
 }
 .cont{
+  justify-content: space-evenly;
    padding: 75px;
     display: flex;
     justify-content: center;
@@ -194,4 +195,7 @@ font-weight: bold;
 .newTeamDetailsCont input{
     height: 40px;
     width: 300px;
+}
+.teamview{
+  margin-left: 150px;
 }
