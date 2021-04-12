@@ -24,21 +24,19 @@ const managerLoginHandler = async (event) => {
 const createManagerHandler = async (event) => {
   event.preventDefault();
   console.log("hello");
-  const createManager = document
-    .querySelector("#newManagerNameInput")
-    .value.trim();
+  const createManager = document.querySelector("#newManagerNameInput").value.trim();
   const password = document.querySelector("#newPasswordInput").value.trim();
   console.log(password);
 
   if (createManager && password) {
-    const response = await fetch("/api/managers", {
-      method: "POST",
+    const response = await fetch('/api/managers', {
+      method: 'POST',
       body: JSON.stringify({ name: createManager, password }),
-      headers: { "Content-Type": "application/json" },
+      headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      document.location.replace("/teampage");
+      document.location.replace('/teampage');
     } else {
       alert(response.statusText);
     }
