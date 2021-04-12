@@ -199,3 +199,11 @@ font-weight: bold;
 .teamview{
   margin-left: 150px;
 }
+#next{
+  width:100px;
+  height: 45px;
+}
+#wildcard{
+  background-color: white;
+    color:rgb(168, 63, 57);
+}

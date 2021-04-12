@@ -12,7 +12,7 @@ function GetSelectedFielder(){
   var fielderChoice = e.options[e.selectedIndex].text;
   
 
- document.getElementById("Fielder").append(fielderChoice);
+ document.getElementById("Feilder").append(fielderChoice);
 }
 function GetSelectedPitcher(){
   var e = document.getElementById("playerSelectP");
