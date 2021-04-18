@@ -16,17 +16,17 @@ function nextRoundHandeler() {
 console.log(war)
 
 document.getElementById("warscore").append(war);
-  if (war > 10) {
+  if (war > 14) {
     document.getElementById("LDS").style.backgroundColor = "white";
     document.getElementById("LDS").style.color = "rgb(168, 63, 57)";
     alert("You Made it to the LDS!");
   }
-  if (war > 14) {
+  if (war > 18) {
     document.getElementById("LCS").style.backgroundColor = "white";
     document.getElementById("LCS").style.color = "rgb(168, 63, 57)";
     alert("You Made it to the LCS!");
   }
-  if (war > 30) {
+  if (war > 20) {
     document.getElementById("WorldSeries").style.backgroundColor = "white";
     document.getElementById("WorldSeries").style.color = "rgb(168, 63, 57)";
     alert("You Won The World Series!")

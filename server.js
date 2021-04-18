@@ -34,10 +34,10 @@ app.get("/", function (req, res) {
   res.render("login");
 });
 app.get("/teampage", async function (req, res) {
-  let currentUser = await Manager.findOne({where: {id: req.session.user_id}});
-  currentUser = currentUser.get({
-    plain: true
-  })
+  // let currentUser = await Manager.findOne({where: {id: req.session.user_id}});
+  // currentUser = currentUser.get({
+  //   plain: true
+  // })
   res.render("teampage", currentUser);
 });
 

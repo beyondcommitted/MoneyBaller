@@ -24,24 +24,16 @@ const managerLoginHandler = async (event) => {
 const createManagerHandler = async (event) => {
   event.preventDefault();
   console.log("hello");
-<<<<<<< HEAD
   const createManager = document.querySelector("#newManagerNameInput").value.trim();
-=======
   const createManager = document
     .querySelector("#newManagerNameInput")
     .value.trim();
     console.log(createManager);
->>>>>>> 661d6bb52af3fdf3c92228233b9b4d72c64cdd94
   const password = document.querySelector("#newPasswordInput").value.trim();
 
   if (createManager && password) {
-<<<<<<< HEAD
-    const response = await fetch('/api/managers', {
-      method: 'POST',
-=======
     const response = await fetch("/api/managers/signup", {
       method: "POST",
->>>>>>> 661d6bb52af3fdf3c92228233b9b4d72c64cdd94
       body: JSON.stringify({ name: createManager, password }),
       headers: { 'Content-Type': 'application/json' },
     });
