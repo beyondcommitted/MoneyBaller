@@ -1,6 +1,12 @@
 const router = require("express").Router();
 const { Manager } = require("../../models");
 
+router.get("/teampage", function (req, res) {
+  res.render("teampage");
+});
+
+
+
 router.post("/signup", async (req, res) => {
   try {
     const managerData = await Manager.create(req.body);

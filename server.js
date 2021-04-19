@@ -3,9 +3,12 @@ const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const routes = require("./Controllers");
+const homeroutes = require("./Controllers/homeRoutes")
+const draftroutes = require("./Controllers/api/draftRoutes")
+const managerRoutes = require("./Controllers/api/managerRoutes")
+const playRoutes = require("./Controllers/api/playRoutes")
 const helpers = require("./utils/helpers");
-const { Team } = require("./models");
-const Manager = require("./models/Manager");
+
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -26,33 +29,18 @@ const sess = {
     db: sequelize,
   }),
 };
-//routes
 
 app.use(session(sess));
 
-app.get("/", function (req, res) {
-  res.render("login");
-});
-app.get("/teampage", async function (req, res) {
-  // let currentUser = await Manager.findOne({where: {id: req.session.user_id}});
-  // currentUser = currentUser.get({
-  //   plain: true
-  // })
-  res.render("teampage", currentUser);
-});
 
-// app.get("/logout", function (req, res) {
-// });
+// all routes used
+app.use(routes);
+app.use(homeroutes)
+app.use(draftroutes)
+app.use(managerRoutes)
+app.use(playRoutes)
 
-app.get("/newTeam", function (req, res) {
-  res.render("newTeam");
-});
-app.get("/draft", function (req, res) {
-  res.render("draft");
-});
-app.get("/play", function (req, res) {
-  res.render("play", { players: Team });
-});
+
 // Inform Express.js on which template engine to use
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
@@ -61,7 +49,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));

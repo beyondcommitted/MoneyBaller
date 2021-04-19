@@ -2,6 +2,11 @@
 const router = require("express").Router();
 const { Team } = require("../../models");
 
+router.get("/draft", function (req, res) {
+  res.render('draft')
+});
+
+
 
 router.post("/draft", async (req, res) => {
     try {
