@@ -9,7 +9,7 @@ const managerRoutes = require("./Controllers/api/managerRoutes")
 const playRoutes = require("./Controllers/api/playRoutes")
 const helpers = require("./utils/helpers");
 
-const sequelize = require("./config/connection");
+const sequelize = require("./Config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
